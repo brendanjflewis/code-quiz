@@ -7,7 +7,7 @@ var questions = [
             "alerts", 
             "numbers"
         ],
-        correct: "strings"
+        correct: "alerts"
     }, 
     {
         question: "The condition with an if / else statement is enclosed with ___",
@@ -17,7 +17,7 @@ var questions = [
             'perenthesis', 
             'square brackets'
         ],
-        correct: "square brackets",
+        correct: "curly brackets",
     }, 
     {
         question: "Arrays in Javascript can be used to store ___",
@@ -27,7 +27,7 @@ var questions = [
             'booleans', 
             'all of the above'
         ],
-        correct: "other arrays"
+        correct: "all of the above"
     }, 
     {
         question: "String values most be enclosed within ___ when being associated to variables",
@@ -36,7 +36,7 @@ var questions = [
             'curly brackets',
             'quotes',
             'perenthesis'],
-        correct: "curly brackets"
+        correct: "quotes"
     }, 
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
@@ -44,7 +44,7 @@ var questions = [
         'terminal/bash',
         'for loops',
         'console.log'],
-        correct: "for loops"
+        correct: "console.log"
     }
 ]
 
@@ -80,7 +80,9 @@ function nextQuestion() {
         optionsContainer.append(option)
 
         option.addEventListener('click', function(event) {
-            if (event.target.id === questions[questionIndex].correct) {              
+            if (event.target.id === questions[questionIndex].correct) {
+                console.log('correct')
+                score += 50              
             } else {
                 console.log('incorrect')
                 timer -= 20
@@ -106,5 +108,5 @@ function timerCountdown() {
 function endQuiz() {
     questionDiv.textContent = ''
     optionsContainer.textContent = ''
-    
+    timeContainer.textContent = ''
 }
