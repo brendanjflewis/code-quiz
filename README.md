@@ -3,7 +3,7 @@
 ## Description
 JavaScript themed quiz. Five questions to test your knowledge. Beat the clock and log your score. Can you make it to the top?
 
-[Quiz Link](brendanjflewis.github.io/code-quiz/)
+[Quiz Link](https://brendanjflewis.github.io/code-quiz/)
 
 ## Table of Contents
 * [Usage](#usage)
