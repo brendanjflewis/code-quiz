@@ -5,6 +5,8 @@ JavaScript themed quiz. Five questions to test your knowledge. Beat the clock an
 
 [Quiz Link](https://brendanjflewis.github.io/code-quiz/)
 
+![Code Quiz Image](assets/images/code-quiz.jpg)
+
 ## Table of Contents
 * [Usage](#usage)
 * [Questions](#questions)
