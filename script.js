@@ -51,13 +51,15 @@ var questions = [
 const startBtn = document.getElementById('start-button')
 const questionDiv = document.getElementById('question')
 const optionsContainer = document.getElementById('options')
+const timeContainer = document.getElementById('timer')
 
 startBtn.addEventListener('click', function() {
     startBtn.setAttribute('class', 'hidden')
     nextQuestion()
+    timerCountdown()
 })
 
-var timer = 120
+var timer = 90
 var score = 0
 var questionIndex = 0
 
@@ -81,6 +83,7 @@ function nextQuestion() {
             if (event.target.id === questions[questionIndex].correct) {              
             } else {
                 console.log('incorrect')
+                timer -= 20
             }
             questionIndex++
             nextQuestion()
@@ -88,6 +91,17 @@ function nextQuestion() {
     }
 }
 
+function timerCountdown() {
+    var beginTimer = setInterval(function() {
+        timeContainer.textContent = timer
+        timer--
+        if (timer < 0 || questionIndex > questions.length - 1 ) {
+            clearInterval(beginTimer)
+            endQuiz()
+            return
+        }
+    }, 1000)
+}
 
 function endQuiz() {
     questionDiv.textContent = ''

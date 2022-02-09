@@ -20,6 +20,11 @@
     font-weight: bold;
 }
 
+#options {
+    display: flex;
+    width: 100%;
+}
+
 #options li {
     float: left;
     list-style: none;
@@ -40,4 +45,9 @@
 
 .hidden {
     display: none;
+}
+
+.button {
+    width: 150px;
+    height: 60px;
 }
