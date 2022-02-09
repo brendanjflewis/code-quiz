@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Code Quiz</title>
 </head>
 <body>
     <header>
-        <button>View high scores</button>
+        <a href="highscores.html">
+            <div id="high-scores">
+                High Scores
+            </div>
+        </a>
     </header>
-    <div id="container">
+    <div id="container" >
         <div id="main-content">
             <div id="timer"></div>
             <div id="question"></div>
             <ul id="options"></ul>
         </div>
-        <form id='userForm'></form>
-        <button id="start-button">Start Quiz</button>
+        <div id="start">
+            <form id='userForm'></form>
+            <button id="start-button">
+                Start Quiz
+            </button>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

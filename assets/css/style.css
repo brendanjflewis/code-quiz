@@ -4,6 +4,11 @@
     padding:0;
 }
 
+header {
+    text-align: center;
+    font-size: x-large;
+    
+}
 #container {
     width: 100vw;
     height: 100vh;
@@ -38,6 +43,7 @@
 }
   
 #options li:hover {
+    cursor: pointer;
     text-decoration: none;
     color: #000000;
     background-color: #33B5E5;
@@ -47,7 +53,17 @@
     display: none;
 }
 
-.button {
-    width: 150px;
-    height: 60px;
+button {
+    width: 300px;
+    height: 120px;
+    color: white;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    background-color: #33B5E5;
 }

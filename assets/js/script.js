@@ -51,6 +51,7 @@ var questions = [
 const startBtn = document.getElementById('start-button')
 const questionDiv = document.getElementById('question')
 const optionsContainer = document.getElementById('options')
+const form = document.getElementById('userForm')
 const timeContainer = document.getElementById('timer')
 
 startBtn.addEventListener('click', function() {
@@ -93,6 +94,8 @@ function nextQuestion() {
     }
 }
 
+//timer set to begin when you press the start button
+//and begin the quiz
 function timerCountdown() {
     var beginTimer = setInterval(function() {
         timeContainer.textContent = timer
@@ -105,8 +108,38 @@ function timerCountdown() {
     }, 1000)
 }
 
+
+// function to end the quiz
 function endQuiz() {
     questionDiv.textContent = ''
     optionsContainer.textContent = ''
     timeContainer.textContent = ''
+
+    var initials = document.createElement('input')
+    initials.setAttribute('placeholder', 'Enter your initials')
+    form.prepend(initials)
+
+    var submitBtn = document.createElement('button')
+    submitBtn.textContent = 'Submit'
+    form.append(submitBtn)
+
+    submitBtn.addEventListener('click', function(e) {
+        e.preventDefault()
+        var storage = JSON.parse(localStorage.getItem('highscores'))
+        if (storage === null) {
+            storage = []
+        }
+        
+        var user = {
+            name: initials.value,
+            score: score
+
+        }
+
+        storage.push(user)
+
+        localStorage.setItem('highscores', JSON.stringify(storage))
+        
+        window.location.href = 'highscores.html'
+    })
 }
