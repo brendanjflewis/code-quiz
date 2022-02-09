@@ -57,6 +57,8 @@ startBtn.addEventListener('click', function() {
     nextQuestion()
 })
 
+var timer = 120
+var score = 0
 var questionIndex = 0
 
 function nextQuestion() {

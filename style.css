@@ -4,13 +4,31 @@
     padding:0;
 }
 
-.main-content {
+#container {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+#options li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    margin-right: 30px;
+    width: 150px;
+    line-height: 60px;
+}
+  
+#options li:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: #33B5E5;
 }
 
 .hidden {
